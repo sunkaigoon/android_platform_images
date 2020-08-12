@@ -1,5 +1,6 @@
 package com.sunkai.flutter.androidPlatformImages;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -48,6 +49,7 @@ public class AndroidPlatformImagesPlugin implements FlutterPlugin, MethodCallHan
     channel.setMethodCallHandler(new AndroidPlatformImagesPlugin());
   }
 
+  @SuppressLint("WrongThread")
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("loadImage")) {
